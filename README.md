@@ -26,6 +26,7 @@
 
 >예제 코드
 >acivity_main.xml 에서 화면 구성하기
+
 ```xml
     <Button
         android:text="물어와"
