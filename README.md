@@ -133,3 +133,8 @@ public class MainActivity extends AppCompatActivity {
 이미지를 손가락으로 터치 했을 시 이미지의 크기가 바뀌는 애니메이션 만들기
 스레드를 이용해 이미지 변경
 
+
+> /MyThread4/app/src/main/res/layout/activity_main.xml
+> ![frame1](https://github.com/misarm/android-project15/blob/master/frame2.png?raw=true)
+
+
