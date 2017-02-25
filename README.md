@@ -36,7 +36,7 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/button" />
 
-    <LinearLayout
+>    <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -44,7 +44,7 @@
         android:layout_alignParentEnd="true"
         android:weightSum="1">
 
-        <ImageView
+>       <ImageView
             android:layout_width="63dp"
             android:layout_height="70dp"
             android:id="@+id/imageView"
@@ -55,7 +55,7 @@
             android:layout_weight="0.08" />
     </LinearLayout>
 
-    <EditText
+>    <EditText
         android:layout_width="match_parent"
         android:inputType="textPersonName"
         android:ems="10"
@@ -66,7 +66,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:singleLine="false" />
->```
+```
 
 
 
