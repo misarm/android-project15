@@ -71,16 +71,21 @@
 ![frame1](https://github.com/misarm/android-project15/blob/master/frame1.png?raw=true)
 
 
+>애니메이션 액션정보 필요
+>이미지가 어디로 어떻게 이동할 것인지 xml 코드로 미리 만들어둔다
+>
+> /res 폴더 안에 anim 폴더를 만들고 등록
+> new -> Animation resource file -> translate.xml
 
-
-
-애니메이션 액션정보 필요
-이미지가 어디로 어떻게 이동할 것인지 xml 코드로 미리 만들어둔다
-
-/res 폴더 안에 anim 폴더를 만들고 등록
-new -> Animation resource file 
-translate.xml
-
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <translate android:fromXDelta="0%"
+        android:toXDelta="+300%"
+        android:duration="1500"
+        />
+</set>
+```
 
 
 
