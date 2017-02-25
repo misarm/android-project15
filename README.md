@@ -26,8 +26,7 @@
 
 >예제 코드
 >acivity_main.xml 에서 화면 구성하기
->
->```xml
+```xml
     <Button
         android:text="물어와"
         android:layout_width="wrap_content"
@@ -36,7 +35,7 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/button" />
 
->    <LinearLayout
+    <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -44,7 +43,7 @@
         android:layout_alignParentEnd="true"
         android:weightSum="1">
 
->       <ImageView
+       <ImageView
             android:layout_width="63dp"
             android:layout_height="70dp"
             android:id="@+id/imageView"
@@ -55,7 +54,7 @@
             android:layout_weight="0.08" />
     </LinearLayout>
 
->    <EditText
+    <EditText
         android:layout_width="match_parent"
         android:inputType="textPersonName"
         android:ems="10"
@@ -67,6 +66,8 @@
         android:layout_alignParentStart="true"
         android:singleLine="false" />
 ```
+
+![frame1](https://github.com/misarm/android-project15/blob/master/frame1.png?raw=true)
 
 
 
