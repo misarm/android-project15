@@ -14,6 +14,8 @@
 
 이때 각각의 이미지를 프레임이라고 하고 프로그램이 알아서 움직이도록 한다
 
+![animation](https://github.com/misarm/android-project15/blob/master/ani.png?raw=true)
+
 이런 방식이 트윈 애니메이션임
 
 > 즉, 키가 되는 몇장의 프레임만 만들어도 나머지는 프로그램에서 계산하여 보이도록 하는 애니메이션임
@@ -22,10 +24,53 @@
 
 
 
-코드
-
-
+예제 코드
 acivity_main.xml 에서 화면 구성하기
+
+'''
+    <Button
+        android:text="물어와"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/button" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button"
+        android:layout_alignParentEnd="true"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="63dp"
+            android:layout_height="70dp"
+            android:id="@+id/imageView"
+            android:src="@drawable/dog"
+            android:layout_alignTop="@+id/imageView"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="116dp"
+            android:layout_weight="0.08" />
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:gravity="top|center_vertical"
+        android:layout_height="350dp"
+        android:maxLines="10"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:singleLine="false" />
+'''
+
+
+
+
 
 애니메이션 액션정보 필요
 이미지가 어디로 어떻게 이동할 것인지 xml 코드로 미리 만들어둔다
