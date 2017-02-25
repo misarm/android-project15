@@ -24,10 +24,10 @@
 
 
 
-예제 코드
-acivity_main.xml 에서 화면 구성하기
-
-```xml
+>예제 코드
+>acivity_main.xml 에서 화면 구성하기
+>
+>```xml
     <Button
         android:text="물어와"
         android:layout_width="wrap_content"
@@ -66,7 +66,7 @@ acivity_main.xml 에서 화면 구성하기
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:singleLine="false" />
-```
+>```
 
 
 
