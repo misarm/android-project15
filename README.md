@@ -71,10 +71,13 @@
 ![frame1](https://github.com/misarm/android-project15/blob/master/frame1.png?raw=true)
 
 
+
+
 >애니메이션 액션정보 필요
 >이미지가 어디로 어떻게 이동할 것인지 xml 코드로 미리 만들어둔다
 >
 > /res 폴더 안에 anim 폴더를 만들고 등록
+>
 > new -> Animation resource file -> translate.xml
 
 ```xml
@@ -85,6 +88,42 @@
         android:duration="1500"
         />
 </set>
+```
+
+```java
+public class MainActivity extends AppCompatActivity {
+
+    ImageView imageView;
+
+    EditText editText;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        imageView = (ImageView) findViewById(R.id.imageView);
+
+        editText = (EditText) findViewById(R.id.editText);
+
+        Button button = (Button) findViewById(R.id.button);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                // AnimationUtils.loadAnimation 이용
+                Animation anim = AnimationUtils.loadAnimation( getApplicationContext(), R.anim.translate );
+
+                imageView.startAnimation( anim );
+
+                editText.append( "애니메이션 시작됨. \n" );
+            }
+        });
+
+
+    }
+}
 ```
 
 
