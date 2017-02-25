@@ -213,3 +213,34 @@ public class DogImageView extends ImageView{
     }
 }
 ```
+
+<br>
+<br>
+
+> /MyThread4/app/src/main/res/layout/activity_main.xml
+
+```xml
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:weightSum="1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true">
+
+        <!--뷰 객체를 상속하여 만든후 xml 레이아웃에 추가할때는 페키지 이름까지 모두 써준다-->
+        <!--<ImageView-->
+        <org.androidtown.org.mythread4.DogImageView
+            android:layout_width="63dp"
+            android:layout_height="70dp"
+            android:id="@+id/imageView"
+            android:src="@drawable/dog_standing"
+            android:layout_alignTop="@+id/imageView"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="116dp"
+            android:layout_weight="0.08" />
+    </LinearLayout>
+```
+
+
