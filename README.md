@@ -1,6 +1,6 @@
 # 안드로이드 15장 
 
-> 여러가지 작업을 동시에 수행하기
+   여러가지 작업을 동시에 수행하기
 
 * * *
 
@@ -27,7 +27,7 @@
 예제 코드
 acivity_main.xml 에서 화면 구성하기
 
-'''
+```
     <Button
         android:text="물어와"
         android:layout_width="wrap_content"
@@ -66,7 +66,7 @@ acivity_main.xml 에서 화면 구성하기
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:singleLine="false" />
-'''
+```
 
 
 
