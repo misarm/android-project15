@@ -27,8 +27,8 @@
 예제 코드
 acivity_main.xml 에서 화면 구성하기
 
-```
-    <Button
+```xml
+    <Button
         android:text="물어와"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
