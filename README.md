@@ -146,11 +146,11 @@ public class MainActivity extends AppCompatActivity {
 <br>
 
 > /MyThread4/app/src/main/java/org/androidtown/org/mythread4/DogImageView.java
+
 ```java
-/**
- *  View 클래스를 상속하면 터치 이벤트를 처리할 수 있고
- *  그 안에서도 스레드를 만들어 실행할수 있다
- */
+
+ // View 클래스를 상속하면 터치 이벤트를 처리할 수 있고
+ // 그 안에서도 스레드를 만들어 실행할수 있다
     
 public class DogImageView extends ImageView{
 
