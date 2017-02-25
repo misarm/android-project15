@@ -23,7 +23,8 @@
 표준 자바에서는 제공하지 않음, 안드로이드는 지원
 
 
-
+<br>
+<br>
 >예제 코드
 >acivity_main.xml 에서 화면 구성하기
 
@@ -72,7 +73,8 @@
 
 
 
-
+<br>
+<br>
 >애니메이션 액션정보 필요
 >이미지가 어디로 어떻게 이동할 것인지 xml 코드로 미리 만들어둔다
 >
@@ -126,7 +128,9 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-
+<br>
+<br>
+<br>
 
 ## 04 뷰를 상속하고 이벤트 처리하기
 
@@ -138,3 +142,74 @@ public class MainActivity extends AppCompatActivity {
 > ![frame1](https://github.com/misarm/android-project15/blob/master/frame2.png?raw=true)
 
 
+<br>
+<br>
+
+> /MyThread4/app/src/main/java/org/androidtown/org/mythread4/DogImageView.java
+```java
+/**
+ *  View 클래스를 상속하면 터치 이벤트를 처리할 수 있고
+ *  그 안에서도 스레드를 만들어 실행할수 있다
+ */
+    
+public class DogImageView extends ImageView{
+
+    Handler handler = new Handler();
+
+    //새로 추가한 두개의 생성자는 각각 다르게 사용할 예정
+
+    //소스코드에서 new 이용해 직접 이미지뷰 객체를 만들때 사용
+    public DogImageView(Context context) {
+        super(context);
+    }
+
+    //화면에 들어갈 이미지뷰 위젯을 Xml 레이아웃에 추가 할때 사용
+    public DogImageView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        //return super.onTouchEvent(event);
+        DogThread thread1 = new DogThread();
+        thread1.start();
+
+        return true;
+    }
+
+    //스레드 안에서 이미지를 변경하도록 한다
+    class DogThread extends Thread {
+        int stateIndex;
+
+        ArrayList<Integer> images = new ArrayList<Integer>();
+
+        public DogThread(){
+            images.add(R.drawable.dog_standing);
+            images.add(R.drawable.dog_running);
+            images.add(R.drawable.dog_biting);
+        }
+
+        public void run(){
+            stateIndex = 0;
+            for(int i = 0; i < 9; i++){
+                handler.post(new Runnable(){
+                    @Override
+                    public void run() {
+                        setImageResource(images.get(stateIndex));
+                    }
+                });
+
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e){
+                    e.printStackTrace();
+                }
+                stateIndex++;
+                if (stateIndex >= images.size()){
+                    stateIndex = 0;
+                }
+            }
+        }
+    }
+}
+```
